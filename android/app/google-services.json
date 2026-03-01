@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "957458866980",
+    "project_id": "sketchify-b0c20",
+    "storage_bucket": "sketchify-b0c20.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957458866980:android:02a404c8497dfb2521c9b1",
+        "android_client_info": {
+          "package_name": "com.example.sketchify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCerZq2bw9tBGCOxT8424IVCRMx5v2oD8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
