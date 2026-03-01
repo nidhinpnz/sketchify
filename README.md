@@ -1,16 +1,68 @@
-# sketchify
+# ✨ Sketchify
 
-A new Flutter project.
+**Turn your memories into art. Sync across all your devices.**
 
-## Getting Started
+Sketchify is a premium Flutter application that transforms your ordinary photos into stunning pencil sketches using advanced image processing. With built-in Firebase synchronization, your artistic creations are always available, no matter which device you're using.
 
-This project is a starting point for a Flutter application.
+![Sketchify Hero](https://via.placeholder.com/800x400?text=Sketchify+App+Showcase)
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **🎨 Photo-to-Sketch Magic**: Instantly convert any gallery image or camera snap into a high-quality pencil sketch.
+- **🎚️ Precision Control**: Fine-tune the "Intensity" of the sketch effect with a real-time slider to get the perfect look.
+- **☁️ Cloud Sync**: Secure authentication via Firebase Auth allows you to access your experience across multiple devices.
+- **💾 Save & Share**: Export your masterpieces directly to your gallery or share them with friends and family via social apps.
+- **🛡️ Modern UI/UX**: A sleek, dark-themed Material 3 interface designed for a premium user experience.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Framework**: [Flutter](https://flutter.dev/) (Multi-platform UI toolkit)
+- **Backend**: [Firebase](https://firebase.google.com/) (Authentication & Core services)
+- **Image Processing**: Custom Dart implementation (Grayscale, Gaussian Blur, Color Dodge blending)
+- **Plugins**: `image_picker`, `share_plus`, `gal`, `path_provider`
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Flutter SDK (>= 3.0.0)
+- Android Studio / VS Code
+- A Firebase project
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/sketchify.git
+   cd sketchify
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   flutter pub get
+   ```
+
+3. **Firebase Setup:**
+   - Create a new project in the [Firebase Console](https://console.firebase.google.com/).
+   - Add an Android/iOS app to your Firebase project.
+   - Download the `google-services.json` (for Android) or `GoogleService-Info.plist` (for iOS) and place them in the appropriate directories.
+   - Enable **Email/Password** authentication in the Firebase Auth section.
+
+4. **Run the app:**
+   ```bash
+   flutter run
+   ```
+
+## 📸 Screenshots
+
+| Landing Page | Authentication | Sketch Studio |
+| :---: | :---: | :---: |
+| ![Landing](https://via.placeholder.com/200x400?text=Landing) | ![Auth](https://via.placeholder.com/200x400?text=Auth) | ![Studio](https://via.placeholder.com/200x400?text=Studio) |
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have ideas for new features or improvements.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
