@@ -53,6 +53,11 @@ Sketchify is a premium Flutter application that transforms your ordinary photos 
    flutter run
    ```
 
+## 📸 Screenshots
+
+| Landing Page | Authentication | Sketch Studio |
+| :---: | :---: | :---: |
+| ![Landing](screenshots/loginn.png.png) | ![Auth](screenshots/login.png.png) | ![Studio](screenshots/home.png.png) |
 
 ## 🤝 Contributing
 
