@@ -10,6 +10,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as path;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,7 @@ class SketchifyApp extends StatelessWidget {
           seedColor: Colors.deepPurple,
           brightness: Brightness.dark,
         ),
-        fontFamily: 'Inter',
+        fontFamily: GoogleFonts.outfit().fontFamily,
       ),
       home: const AuthWrapper(),
     );
@@ -93,10 +94,12 @@ class LandingPage extends StatelessWidget {
                 const SizedBox(height: 24),
                 Text(
                   'Sketchify',
-                  style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
+                  style: GoogleFonts.outfit(
+                    textStyle: Theme.of(context).textTheme.displayMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                  ),
                 ),
                 const SizedBox(height: 16),
                 Text(
@@ -206,19 +209,23 @@ class _AuthPageState extends State<AuthPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                _isLogin ? 'Welcome Back' : 'Create Account',
-                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.primary,
-                    ),
+                _isLogin ? 'Welcome back, Artist' : 'Join the Collective',
+                style: GoogleFonts.outfit(
+                  textStyle: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: -1,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                ),
               ),
               const SizedBox(height: 8),
               Text(
                 _isLogin
-                    ? 'Login to access your sketches.'
-                    : 'Start your artistic journey today.',
+                    ? 'Your studio is ready. Let\'s create.'
+                    : 'Unlock your creativity and sync across all devices.',
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+                      letterSpacing: 0.2,
                     ),
               ),
               const SizedBox(height: 48),
@@ -324,6 +331,15 @@ class _HomePageState extends State<HomePage> {
 
     img.Image? image = img.decodeImage(bytes);
     if (image == null) return Uint8List(0);
+
+    // Optimize: Resize image if it's too large for faster processing
+    if (image.width > 1024 || image.height > 1024) {
+      if (image.width > image.height) {
+        image = img.copyResize(image, width: 1024);
+      } else {
+        image = img.copyResize(image, height: 1024);
+      }
+    }
 
     // 1. Convert to grayscale
     img.Image grayscale = img.grayscale(image);
