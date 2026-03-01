@@ -4,7 +4,7 @@
 
 Sketchify is a premium Flutter application that transforms your ordinary photos into stunning pencil sketches using advanced image processing. With built-in Firebase synchronization, your artistic creations are always available, no matter which device you're using.
 
-![Sketchify Hero](https://via.placeholder.com/800x400?text=Sketchify+App+Showcase)
+
 
 ## 🚀 Features
 
